@@ -16,7 +16,7 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       docker build -f Dockerfile -t strawberry-build . || travis_terminate 1;
       docker run --name build -itd strawberry-build /bin/bash || travis_terminate 1;
-      docker exec build git clone https://github.com/jonaski/strawberry;
+      docker exec build git clone https://github.com/strawberrymusicplayer/strawberry;
     fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
       git fetch --unshallow || travis_terminate 1;
