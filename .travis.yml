@@ -22,6 +22,7 @@ before_install:
       git fetch --unshallow || travis_terminate 1;
       git pull || travis_terminate 1;
       brew update || travis_terminate 1;
+      brew upgrade || travis_terminate 1;
       brew unlink python || travis_terminate 1;
       brew install glib pkgconfig libffi protobuf protobuf-c qt gettext gnutls fftw sqlite chromaprint;
       brew install gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav;
