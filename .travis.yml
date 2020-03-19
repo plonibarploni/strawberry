@@ -21,6 +21,7 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
       git fetch --unshallow || travis_terminate 1;
       git pull || travis_terminate 1;
+      brew unlink python@2 || travis_terminate 1;
       brew update || travis_terminate 1;
       brew upgrade || travis_terminate 1;
       brew unlink python@2 || travis_terminate 1;
