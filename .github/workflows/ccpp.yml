@@ -48,3 +48,7 @@ jobs:
       working-directory: ${{runner.workspace}}/build
       shell: bash
       run: make install
+    - name: make dmg
+      working-directory: ${{runner.workspace}}/build
+      run: make dmg;
+      
